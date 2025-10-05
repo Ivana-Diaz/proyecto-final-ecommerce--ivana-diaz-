@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Outfit, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    background-color: #eddbcf;
+    color: #0D2767;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #DA5C7E;
+    color: #FFEFD1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: #FFEFD1;
+}
+
+.header-logo {
+    background-color: #233E84;
+    padding: 1rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: Lobster, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    border-radius: 4rem 1rem;
+}
+
+.header-nav {
+    padding: 1rem;
+    margin-right: 2rem;
+}
+
+.header-nav li {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #FFEFD1;
+    display: inline-block;
+    padding: 1rem;
+}
+
+footer {
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-nav li {
+    font-weight: bold;
+}
+
+/* HOME */
+
+main {
+    width: 90%;
+    flex: 1;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .titulo-home {
+    font-size: 4rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+main .parrafo-home {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 80%;
+}
+
+.productos-home {
+    width: 100%;
+}
+
+.productos-home h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    margin: 2rem 3rem;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.tarjeta-producto {
+    background-color: #233E84;
+    color: #FFEFD1;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tarjeta-producto h3 {
+    font-size: 2rem;
+}
+
+.tarjeta-producto p {
+    font-size: 2rem;
+}
+
+.tarjeta-producto img {
+    width: 28rem;
+    height: 28rem;
+    border-radius: 0.5rem;
+}
+
+/* CONTACTO */
+
+.seccion-contacto {
+    width: 100%;
+    margin: 2rem auto;
+}
+
+.titulo-contacto {
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.form {
+    background-color: #233E84;
+    color: #FFEFD1;
+    padding: 4rem;
+    border-radius: 1rem;
+    width: 50rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.campo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.campo-form label {
+    font-size: 2rem;
+}
+
+.campo-form input, .campo-form textarea {
+    padding: 1rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.campo-form textarea {
+    resize: none;
+    font-family: Outfit, sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+.form button {
+    font-family: Outfit, sans-serif;
+    background-color: #DA5C7E;
+    color: #FFEFD1;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  header, footer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .header-logo {
+    margin: 2rem 0 0;
+  }
+
+  .header-nav {
+    margin: 0;
+  }
+
+  .form {
+    width: 80%;
+    min-width: 38rem;
+  }
+}
