@@ -7,3 +7,24 @@ const productos = [
     { imagen: "./img/sueter-verde.jpg", nombre: "Suéter verde", precio: 2000 },
 ];
 
+let divTarjetas = document.querySelector(".contenedor-tarjetas");
+
+productos.forEach((producto) => {
+    let tarjetaProducto = document.createElement("article");
+    tarjetaProducto.classList.add("tarjeta-producto");
+
+    let imgProducto = document.createElement("img");
+    imgProducto.src = producto.imagen;
+    
+    let tituloProducto = document.createElement("h3");
+    tituloProducto.textContent = producto.nombre;
+
+    let precioProducto = document.createElement("p");
+    precioProducto.textContent = `$${producto.precio}`;
+
+    tarjetaProducto.appendChild(imgProducto);
+    tarjetaProducto.appendChild(tituloProducto);
+    tarjetaProducto.appendChild(precioProducto);
+
+    divTarjetas.appendChild(tarjetaProducto);
+});
