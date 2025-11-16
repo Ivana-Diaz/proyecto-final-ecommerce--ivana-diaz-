@@ -1,31 +1,55 @@
-const productos = [
-    { imagen: "./img/pulover-gris.jpg", nombre: "Pulóver gris", precio: 1400 },
-    { imagen: "./img/campera-rosa.jpg", nombre: "Campera rosa", precio: 800 },
-    { imagen: "./img/pulover-blanco.jpg", nombre: "Pulóver blanco", precio: 2200 },
-    { imagen: "./img/cardigan-naranja.jpg", nombre: "Cárdigan naranja", precio: 790 },
-    { imagen: "./img/sueter-azul.jpg", nombre: "Suéter azul", precio: 1850 },
-    { imagen: "./img/sueter-verde.jpg", nombre: "Suéter verde", precio: 2000 },
-];
+import { agregarAlCarrito } from "./funcionesCarrito.js";
+import { obtenerCarrito } from "./storage.js";
+import { actualizarContador } from "./ui.js";
 
-let divTarjetas = document.getElementById("contenedor-tarjetas");
+const renderizarProductos = () => {
+    const contenedor = document.getElementById("contenedor-tarjetas");
 
-productos.forEach((producto) => {
-    let tarjetaProducto = document.createElement("article");
-    tarjetaProducto.classList.add("tarjeta-producto");
+    const carrito = obtenerCarrito();
+    actualizarContador(carrito);
 
-    let imgProducto = document.createElement("img");
-    imgProducto.src = producto.imagen;
-    imgProducto.alt = producto.nombre;
-    
-    let tituloProducto = document.createElement("h3");
-    tituloProducto.textContent = producto.nombre;
+    fetch("./data/productos.json")
+        .then((res) => {
+            if (!res.ok) {
+                throw new Error (`Error HTTP status: ${res.status}`);
+            }
 
-    let precioProducto = document.createElement("p");
-    precioProducto.textContent = `$${producto.precio}`;
+            return res.json();
+        })
+        .then((data) => {
+            data.forEach((producto) => {
+                const tarjetaProducto = document.createElement("article");
+                tarjetaProducto.classList.add("tarjeta-producto");
 
-    tarjetaProducto.appendChild(imgProducto);
-    tarjetaProducto.appendChild(tituloProducto);
-    tarjetaProducto.appendChild(precioProducto);
+                const imgProducto = document.createElement("img");
+                imgProducto.src = `./${producto.imagen}`;
+                imgProducto.alt = producto.nombre;
 
-    divTarjetas.appendChild(tarjetaProducto);
-});
+                const tituloProducto = document.createElement("h3");
+                tituloProducto.textContent = producto.nombre;
+
+                const precioProducto = document.createElement("p");
+                precioProducto.textContent = `$${producto.precio}`;
+
+                const botonProducto = document.createElement("button");
+                botonProducto.classList.add("btn");
+                botonProducto.textContent = "Agregar al carrito";
+
+                botonProducto.addEventListener("click", () => {
+                    agregarAlCarrito(producto);
+                });
+
+                tarjetaProducto.appendChild(imgProducto);
+                tarjetaProducto.appendChild(tituloProducto);
+                tarjetaProducto.appendChild(precioProducto);
+                tarjetaProducto.appendChild(botonProducto);
+
+                contenedor.appendChild(tarjetaProducto);
+            });
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+};
+
+document.addEventListener("DOMContentLoaded", renderizarProductos);
