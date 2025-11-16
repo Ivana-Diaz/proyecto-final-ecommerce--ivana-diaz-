@@ -1,52 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <title>Home - Tienda Blue</title>
-</head>
-<body>
-    <header>
-        <p class="header-logo">
-            <a href="./index.html">Tienda Blue</a>
-        </p>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <h1 class="titulo-home">Bienvenidos a Tienda Blue</h1>
-        <p class="parrafo-home">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-            Id magni accusamus quidem perspiciatis quod blanditiis? 
-            Aliquam sunt asperiores recusandae natus deserunt. 
-            Illum non doloribus at tempora veniam commodi, inventore ea provident, 
-            quaerat corrupti asperiores maiores reiciendis eaque odio modi voluptate architecto quisquam. 
-            Praesentium corrupti soluta quis unde numquam est nisi.
-        </p>
-        <section class="productos-home">
-            <h2>Algunos de nuestros productos</h2>
-            <div class="contenedor-tarjetas"></div>
-        </section>
-    </main>
-    <footer>
-        <p>Página diseñada por Ivana.</p>
-        <nav class="footer-nav">
-            <ul>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Tiktok</a></li>
-                <li><a href="#">X</a></li>
-                <li><a href="#">YouTube</a></li>
-            </ul>
-        </nav>
-    </footer>
-    <script src="./js/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <title>Home - Tienda Blue</title>
+    </head>
+    <body>
+        <header>
+            <p class="header-logo">
+                <a href="./index.html">Tienda Blue</a>
+            </p>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/contacto.html">Contacto</a></li>
+                    <li><a href="./pages/carrito.html">🛒<span id="contador-carrito">0</span></a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1 class="titulo-home">Bienvenidos a Tienda Blue</h1>
+            <p class="parrafo-home">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Id magni accusamus quidem perspiciatis quod blanditiis? 
+                Aliquam sunt asperiores recusandae natus deserunt. 
+                Illum non doloribus at tempora veniam commodi, inventore ea provident, 
+                quaerat corrupti asperiores maiores reiciendis eaque odio modi voluptate architecto quisquam. 
+                Praesentium corrupti soluta quis unde numquam est nisi.
+            </p>
+            <section class="productos-home">
+                <h2>Algunos de nuestros productos</h2>
+                <div id="contenedor-tarjetas" class="contenedor-tarjetas"></div>
+            </section>
+        </main>
+        <footer>
+            <p>Página diseñada por Ivana.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Tiktok</a></li>
+                    <li><a href="#">X</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </nav>
+        </footer>
+        <script type="module" src="./js/index.js"></script>
+    </body>
 </html>

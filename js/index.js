@@ -7,7 +7,7 @@ const productos = [
     { imagen: "./img/sueter-verde.jpg", nombre: "Suéter verde", precio: 2000 },
 ];
 
-let divTarjetas = document.querySelector(".contenedor-tarjetas");
+let divTarjetas = document.getElementById("contenedor-tarjetas");
 
 productos.forEach((producto) => {
     let tarjetaProducto = document.createElement("article");
