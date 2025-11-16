@@ -1,0 +1,38 @@
+[
+    { 
+        "id": 1, 
+        "imagen": "img/pulover-gris.jpg", 
+        "nombre": "Pulóver gris", 
+        "precio": 1400 
+    },
+    { 
+        "id": 2, 
+        "imagen": "img/campera-rosa.jpg", 
+        "nombre": "Campera rosa", 
+        "precio": 800 
+    },
+    { 
+        "id": 3, 
+        "imagen": "img/pulover-blanco.jpg", 
+        "nombre": "Pulóver blanco", 
+        "precio": 2200 
+    },
+    { 
+        "id": 4, 
+        "imagen": "img/cardigan-naranja.jpg", 
+        "nombre": "Cárdigan naranja", 
+        "precio": 790 
+    },
+    { 
+        "id": 5, 
+        "imagen": "img/sueter-azul.jpg", 
+        "nombre": "Suéter azul", 
+        "precio": 1850 
+    },
+    { 
+        "id": 6, 
+        "imagen": "img/sueter-verde.jpg", 
+        "nombre": "Suéter verde", 
+        "precio": 2000 
+    }
+]
