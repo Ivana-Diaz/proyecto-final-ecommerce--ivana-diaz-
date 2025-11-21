@@ -153,7 +153,6 @@ main .parrafo-home {
     border: none;
     padding: 0.6rem;
     font-size: 1.6rem;
-    margin-bottom: 1rem;
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -226,21 +225,42 @@ main .parrafo-home {
     font-size: 3rem;
 }
 
+.mensaje-carrito-vacio {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
 #contenedor-carrito {
+    display: flex;
     flex-direction: column;
-    width: 70%
+    width: 60%;
+    gap: 2rem;
 }
 
 #contenedor-carrito .tarjeta-producto {
     flex-direction: row;
     width: 100%;
-    justify-content: space-around;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 #contenedor-carrito img {
     width: 6rem;
     height: 6rem;
+}
+
+.btn-vaciar-carrito {
+    margin-top: 2rem;
+    font-family: Outfit, sans-serif;
+    background-color: #DA5C7E;
+    color: #FFEFD1;
+    border: none;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 /* MEDIA QUERIES */
