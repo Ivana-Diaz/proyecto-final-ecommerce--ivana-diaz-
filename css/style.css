@@ -250,7 +250,7 @@ main .parrafo-home {
     width: 18rem;
 }
 
-#contenedor-carrito p {
+#contenedor-carrito .p-precio {
     width: 6rem;
 }
 
