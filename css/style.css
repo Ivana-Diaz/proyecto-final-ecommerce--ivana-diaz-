@@ -234,13 +234,14 @@ main .parrafo-home {
 #contenedor-carrito {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    align-items: center;
+    width: 100%;
     gap: 2rem;
 }
 
 #contenedor-carrito .tarjeta-producto {
     flex-direction: row;
-    width: 100%;
+    width: 50rem;
     justify-content: space-between;
     gap: 1rem;
 }
