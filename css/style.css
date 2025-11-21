@@ -246,6 +246,14 @@ main .parrafo-home {
     gap: 1rem;
 }
 
+#contenedor-carrito h3 {
+    width: 18rem;
+}
+
+#contenedor-carrito p {
+    width: 6rem;
+}
+
 #contenedor-carrito img {
     width: 6rem;
     height: 6rem;
