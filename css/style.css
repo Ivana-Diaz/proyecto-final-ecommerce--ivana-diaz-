@@ -146,6 +146,19 @@ main .parrafo-home {
     border-radius: 0.5rem;
 }
 
+.tarjeta-producto button {
+    font-family: Outfit, sans-serif;
+    background-color: #DA5C7E;
+    color: #FFEFD1;
+    border: none;
+    padding: 0.6rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
 /* CONTACTO */
 
 .seccion-contacto {
@@ -156,7 +169,6 @@ main .parrafo-home {
 .titulo-contacto {
     font-size: 3rem;
     text-align: center;
-    margin: 1rem 0;
 }
 
 .form {
@@ -165,7 +177,7 @@ main .parrafo-home {
     padding: 4rem;
     border-radius: 1rem;
     width: 50rem;
-    margin: auto;
+    margin: 2rem auto;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -205,6 +217,30 @@ main .parrafo-home {
     font-weight: bold;
     border-radius: 0.5rem;
     cursor: pointer;
+}
+
+/* CARRITO */
+
+.titulo-carrito {
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+#contenedor-carrito {
+    flex-direction: column;
+    width: 70%
+}
+
+#contenedor-carrito .tarjeta-producto {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+#contenedor-carrito img {
+    width: 6rem;
+    height: 6rem;
 }
 
 /* MEDIA QUERIES */
